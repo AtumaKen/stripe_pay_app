@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:stripe_pay_app/models/coordinates_model.dart';
-import 'package:stripe_pay_app/models/customer_model.dart';
 import 'package:stripe_pay_app/screens/payment_screen.dart';
-import 'package:stripe_pay_app/screens/payment_screen2.dart';
 import 'package:stripe_pay_app/services/address_validation_service.dart';
 import 'package:stripe_payment/stripe_payment.dart';
 
@@ -30,7 +28,6 @@ class _AccountVerificationScreenState extends State<AccountVerificationScreen> {
   bool _status = false;
   AddressValidationService _addressValidationService =
       AddressValidationService();
-  static CustomerModel _customerModel;
   final GlobalKey<State> _keyLoader = GlobalKey<State>();
 
   void _showDialog(String message) {
@@ -69,7 +66,7 @@ class _AccountVerificationScreenState extends State<AccountVerificationScreen> {
         _status = false;
       });
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PaymentScreen2()));
+          context, MaterialPageRoute(builder: (context) => PaymentScreen()));
     });
   }
 
@@ -117,7 +114,7 @@ class _AccountVerificationScreenState extends State<AccountVerificationScreen> {
       }
       Navigator.of(_keyLoader.currentContext, rootNavigator: true).pop();
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PaymentScreen2()));
+          context, MaterialPageRoute(builder: (context) => PaymentScreen()));
     });
   }
 
