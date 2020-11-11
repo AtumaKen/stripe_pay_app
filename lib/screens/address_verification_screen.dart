@@ -4,7 +4,6 @@ import 'package:location/location.dart';
 import 'package:stripe_pay_app/models/coordinates_model.dart';
 import 'package:stripe_pay_app/screens/payment_screen.dart';
 import 'package:stripe_pay_app/services/address_validation_service.dart';
-import 'package:stripe_payment/stripe_payment.dart';
 
 class AccountVerificationScreen extends StatefulWidget {
   @override
